@@ -14,5 +14,6 @@ public class ConexionBaseDeDatosTest extends SpringTest{
     @Transactional @Rollback(true)
     public void pruebaConexion(){
         assertThat(getSession().isConnected()).isTrue();
+        //prueba
     }
 }
