@@ -24,7 +24,7 @@ public class ConexionBaseDeDatosTest extends SpringTest{
         assertThat(getSession().isConnected()).isTrue();
     }
     
-    //2. PAISES DE HABLA INGLESA
+    //2. PAISES DE HABLA INGLESA.
     @Test
     @Transactional  @Rollback(true)
     public void idiomaIngles(){
