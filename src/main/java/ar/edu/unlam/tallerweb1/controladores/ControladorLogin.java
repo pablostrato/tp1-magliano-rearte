@@ -75,7 +75,7 @@ public class ControladorLogin {
 		return new ModelAndView("holaMundo");
 	}
 	
-	//PUNTO 6
+	//PUNTO 6 **
 	@RequestMapping(path="/{operacion}/{cadena}", method=RequestMethod.GET)
 	public ModelAndView metodoCadena(@PathVariable String operacion, @PathVariable String cadena) {
 		
