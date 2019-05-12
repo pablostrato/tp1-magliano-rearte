@@ -12,8 +12,8 @@ public class Ubicacion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private float latitud;
-	private float longitud;
+	private Double latitud;
+	private Double longitud;
 	
 	//RELACIONES
 	@ManyToOne
@@ -26,22 +26,22 @@ public class Ubicacion {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public float getLatitud() {
-		return latitud;
-	}
-	public void setLatitud(float latitud) {
-		this.latitud = latitud;
-	}
-	public float getLongitud() {
-		return longitud;
-	}
-	public void setLongitud(float longitud) {
-		this.longitud = longitud;
-	}
 	public Ciudad getCiudad() {
 		return ciudad;
 	}
 	public void setCiudad(Ciudad ciudad) {
 		this.ciudad = ciudad;
+	}
+	public Double getLatitud() {
+		return latitud;
+	}
+	public void setLatitud(Double latitud) {
+		this.latitud = latitud;
+	}
+	public Double getLongitud() {
+		return longitud;
+	}
+	public void setLongitud(Double longitud) {
+		this.longitud = longitud;
 	}
 }

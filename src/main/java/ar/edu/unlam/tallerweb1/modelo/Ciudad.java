@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Ciudad {
@@ -13,12 +14,13 @@ public class Ciudad {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
-	private String ubicacionGeografica;
-	private String pais;
 	
 	//RELACIONES
-	@ManyToOne
-	private Pais pais_r;
+	@OneToOne
+	private Pais pais;
+	
+	@OneToOne
+	Ubicacion ubicacionGeografica;
 	
 	//GETTERS AND SETTERS
 	public Long getId() {
@@ -33,22 +35,16 @@ public class Ciudad {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getUbicacionGeografica() {
-		return ubicacionGeografica;
-	}
-	public void setUbicacionGeografica(String ubicacionGeografica) {
-		this.ubicacionGeografica = ubicacionGeografica;
-	}
-	public String getPais() {
+	public Pais getPais() {
 		return pais;
 	}
-	public void setPais(String pais) {
+	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
-	public Pais getPais_r() {
-		return pais_r;
+	public Ubicacion getUbicacionGeografica() {
+		return ubicacionGeografica;
 	}
-	public void setPais_r(Pais pais_r) {
-		this.pais_r = pais_r;
+	public void setUbicacionGeografica(Ubicacion ubicacionGeografica) {
+		this.ubicacionGeografica = ubicacionGeografica;
 	}
 }
