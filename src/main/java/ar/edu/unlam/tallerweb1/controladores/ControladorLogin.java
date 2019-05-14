@@ -74,40 +74,4 @@ public class ControladorLogin {
 		
 		return new ModelAndView("holaMundo");
 	}
-	
-	//PUNTO 6 **
-	@RequestMapping(path="/{operacion}/{cadena}", method=RequestMethod.GET)
-	public ModelAndView metodoCadena(@PathVariable String operacion, @PathVariable String cadena) {
-		
-		ModelMap model = new ModelMap();
-		
-		String resultado = null;
-		
-		switch(operacion){
-		case "pasarAMayuscula":
-			resultado = cadena.toUpperCase();
-			break;
-			
-		case "pasarAMinuscula":
-			resultado = cadena.toLowerCase();
-			break;
-			
-		case "invertirOrden":
-			StringBuilder invertir = new StringBuilder(cadena);
-			resultado = invertir.reverse().toString();
-			break;
-			
-		case "cantidadDeCaracteres":
-			resultado = String.valueOf(cadena.length());
-			break;
-			
-		default:
-		}
-		
-		model.put("operacionModel", operacion);
-		model.put("cadenaModel", cadena);
-		model.put("resultadoModel",resultado);
-		
-		return new ModelAndView("visualizarCadena", model);
-	}
 }

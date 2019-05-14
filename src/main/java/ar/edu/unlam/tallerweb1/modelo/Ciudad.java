@@ -16,7 +16,7 @@ public class Ciudad {
 	private String nombre;
 	
 	//RELACIONES
-	@OneToOne
+	@ManyToOne
 	private Pais pais;
 	
 	@OneToOne

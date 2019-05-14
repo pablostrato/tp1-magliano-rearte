@@ -16,8 +16,8 @@ public class Ubicacion {
 	private Double longitud;
 	
 	//RELACIONES
-	@ManyToOne
-	private Ciudad ciudad;
+	/*@ManyToOne
+	private Ciudad ciudad; */
 	
 	//GETTERS AND SETTERS
 	public Long getId() {
@@ -26,12 +26,14 @@ public class Ubicacion {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	/*
 	public Ciudad getCiudad() {
 		return ciudad;
 	}
 	public void setCiudad(Ciudad ciudad) {
 		this.ciudad = ciudad;
 	}
+	*/
 	public Double getLatitud() {
 		return latitud;
 	}
