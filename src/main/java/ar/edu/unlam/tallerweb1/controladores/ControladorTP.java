@@ -17,9 +17,6 @@ import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
 @Controller
 public class ControladorTP {
 
-	// La anotacion @Inject indica a Spring que en este atributo se debe setear (inyeccion de dependencias)
-	// un objeto de una clase que implemente la interface ServicioLogin, dicha clase debe estar anotada como
-	// @Service o @Repository y debe estar en un paquete de los indicados en applicationContext.xml
 	@Inject
 	private ServicioLogin servicioLogin;
 
