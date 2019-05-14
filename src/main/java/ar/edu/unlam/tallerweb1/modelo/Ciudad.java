@@ -20,7 +20,7 @@ public class Ciudad {
 	private Pais pais;
 	
 	@OneToOne
-	Ubicacion ubicacionGeografica;
+	private Ubicacion ubicacionGeografica;
 	
 	//GETTERS AND SETTERS
 	public Long getId() {
